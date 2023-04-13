@@ -112,16 +112,9 @@ public class GameManager_LabTest2 : MonoBehaviour {
             if (Input.GetMouseButtonDown(0)) { isHoldingMouse = true; }
 
             if (isHoldingMouse) {
-                Vector2 mousePos;
+                Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                    parentCanvas.transform as RectTransform,
-                    Input.mousePosition, parentCanvas.worldCamera,
-                    out mousePos
-                );
-
-                //Move the Object/Panel
-                mine.localPosition = Vector3.MoveTowards(mine.localPosition, new Vector3(mousePos.x, mine.position.y, 0f), 1f);
+                mine.position = Vector3.MoveTowards(mine.position, new Vector3(targetPos.x, mine.position.y, mine.position.z), 0.1f);
             }
             //===================================================================================================================================================
 
