@@ -1,0 +1,7 @@
+By referring to Mobfish Hunter, create a project to simulate the scene when the sea-mine is going down and avoid the fishes. You can use the art provided in the folder. Here are some requirement that you need to fulfilled:
+1. Fishes have different speeds.
+2. Fishes have to use object pooling.
+3. Seamine can steer left or right by using mouse down input.
+4. Game Over when fishes touch the sea-mine/weapon, else it will go down forever.
+5. (Optional) Different fishes can have different abilities.
+6. (Optional) sea-mine can shoot some spikes to kill fishes.
